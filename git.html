@@ -7,23 +7,62 @@
 </head>
 <body>
     <h1>Entendendo Comandos Git</h1>
-    <prop>
-        git add:
-        O comando git add é usado para adicionar as alterações feitas nos arquivos do repositório Git à área de preparação 
-        (também conhecida como "staging area" ou "stage) para que possam ser incluídas no próximo commit. 
-        O comando git add pode ser usado para adicionar novos arquivos, 
-        atualizar arquivos existentes ou remover arquivos do repositório.
 
-        git commit:
-        O comando git commit é usado para confirmar as alterações feitas nos arquivos do repositório Git
-        que foram adicionados à área de preparação com o comando git add. 
-        O comando git commit cria um novo versionamento das alterações e adiciona uma mensagem de commit que descreve as alterações feitas.
-        Cada commit no Git tem um ID exclusivo e uma mensagem que o descreve.
+    <h2>Projeto Criado:</h2>
+    <p>
+        - Terminal > Git Bash
 
-        git status:
-        O comando git status é um comando utilizado no Git para exibir o estado atual do repositório. 
-        Ele mostra quais arquivos foram modificados, quais arquivos estão na área de preparação (ou "staging area") 
-        prontos para serem confirmados (com o comando "git commit"), e quais arquivos não foram rastreados pelo Git.
-    </prop>
+        Vamos dar os comandos:
+        $ ls -a (vai listar todos os arquivos e diretórios da pasta)
+        $ git init
+
+    <br>
+
+        $ git status (vai nos falar os status do nosso arquivo, se sofreu ou não alterações.)
+        $ git add . (vai adicionar as alterações)
+        $ git commit - m'nome que quiser' (pra comitar as alterações)
+    </p>
+
+    <h2>DIZER SUA CONTA PRO GIT:</h2>
+    <p>
+        git config --global user.name "name"
+        git config --global user.email "email@email.com"
+    </p>
+
+    <h2>Criando Chave SSH</h2>
+    <p>
+        Colocar no terminal:
+        ssh-keygen -t ed25519 -C "seu_email@dominio.com"
+
+        Na primeira linha o terminal avisa que está gerando as suas chaves, 
+        privada e pública com ed25519. Já na segunda linha está te perguntando 
+        onde você quer salvar as suas chaves SSH, entre parênteses e ainda na 
+        segunda linha o terminal tem uma sugestão do caminho e nome do arquivo 
+        onde será guardada a chave gerada.
+
+        Digite uma senha se quiser, se não, aperte ENTER.
+
+        - Ao final teremos:
+        Senha pública (usaremos no GITHUB)
+        Senha privada (mantenha em sigilo)
+    </p>
+
+    <h2>Cadastrando chave no GITHUB</h2>
+    <p>
+        No menu lateral esquerdo clique em SSH and GPG keys e cadastre.
+    </p>
+
+    <h2>Vinculando repositóro para a nuvem.</h2>
+    <p>
+        Procure por 'New' em GITHUB > 'Criar Repositório'
+
+        Siga os passos apresentados.
+
+        Após isso tudo feito.
+    </p>
+    <p>
+        Utilize $ git push após o $ git commit -m'name'
+        Assim irá sempre salvar na nuvém após atualizar seu projeto.
+    </p>
 </body>
 </html>
